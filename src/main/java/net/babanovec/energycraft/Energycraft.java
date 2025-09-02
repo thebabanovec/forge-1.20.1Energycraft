@@ -55,6 +55,10 @@ public class Energycraft {
             event.accept(ModBlocks.STORAGE_BLOCK);
 
         }
+
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModBlocks.CRUSHER);
+        }
     }
 
 

@@ -20,6 +20,9 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, Energycraft.MOD_ID);
 
     public static final RegistryObject<Block> STORAGE_BLOCK = registerBlock("storage_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CRUSHER = registerBlock("crusher",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){
