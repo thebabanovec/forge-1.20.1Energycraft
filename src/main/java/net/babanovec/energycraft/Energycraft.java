@@ -1,6 +1,7 @@
 package net.babanovec.energycraft;
 
 import com.mojang.logging.LogUtils;
+import net.babanovec.energycraft.block.ModBlocks;
 import net.babanovec.energycraft.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,6 +30,7 @@ public class Energycraft {
         IEventBus modEventBus = context.getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup); // Register the commonSetup method for modloading// Register the commonSetup method for modloading
 
@@ -46,6 +48,11 @@ public class Energycraft {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.CIRCUIT_BOARD);
+
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.STORAGE_BLOCK);
 
         }
     }
