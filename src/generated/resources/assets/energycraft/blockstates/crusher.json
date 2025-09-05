@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "energycraft:block/block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "energycraft:block/block"
+    },
+    "facing=south": {
+      "model": "energycraft:block/block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "energycraft:block/block",
+      "y": 270
+    }
+  }
+}

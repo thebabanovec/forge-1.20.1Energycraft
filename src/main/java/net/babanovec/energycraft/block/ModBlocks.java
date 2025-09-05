@@ -1,6 +1,7 @@
 package net.babanovec.energycraft.block;
 
 import net.babanovec.energycraft.Energycraft;
+import net.babanovec.energycraft.block.custom.Crusher;
 import net.babanovec.energycraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -23,7 +24,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> CRUSHER = registerBlock("crusher",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
+            () -> new Crusher(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),new Item.Properties() ));
